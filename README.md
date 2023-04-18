@@ -9,7 +9,7 @@ It is not intended for this extension to end up in the chrome extension store as
 You can download this repository as a .zip and manually load it into your chrome extensions.
 
 1. Download this repository as a zip.
-2. Unpack the .zip somewhere.
+2. Unpack the .zip somewhere safe. You do need to keep the files so the extension can work!
 3. Go to your chrome extensions (chrome://extensions/)
 4. Enable developer mode in the top-right.
 5. Click the "Load unpacked" button in the top-left.
