@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Domain Redirect",
+    "version": "1.0",
+    "description": "Redirects between two domains based on a configurable setting.",
+    "permissions": [
+        "webRequest",
+        "storage",
+        "tabs"
+    ],
+    "host_permissions": [
+        "*://partner.voipgrid.nl/*",
+        "*://freedom.voys.nl/*"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "48": "icon48.png"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "48": "icon48.png"
+    }
+}
