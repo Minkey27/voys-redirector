@@ -1,8 +1,8 @@
-let redirectOption = 'partnerToFreedom';
+let redirectOption = 'vgToVoys';
 
 function updateRedirectOption() {
     chrome.storage.local.get(['redirectOption'], function (result) {
-        redirectOption = result.redirectOption || 'partnerToFreedom';
+        redirectOption = result.redirectOption || 'vgToVoys';
     });
 }
 
@@ -21,7 +21,7 @@ chrome.webRequest.onBeforeRequest.addListener(
         let redirectUrl;
 
         if (
-            redirectOption === 'partnerToFreedom' &&
+            redirectOption === 'vgToVoys' &&
             details.url.startsWith('https://partner.voipgrid.nl')
         ) {
             redirectUrl = details.url.replace(
@@ -29,7 +29,7 @@ chrome.webRequest.onBeforeRequest.addListener(
                 'https://freedom.voys.nl'
             );
         } else if (
-            redirectOption === 'freedomToPartner' &&
+            redirectOption === 'voysToVg' &&
             details.url.startsWith('https://freedom.voys.nl')
         ) {
             redirectUrl = details.url.replace(

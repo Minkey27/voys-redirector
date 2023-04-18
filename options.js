@@ -1,8 +1,12 @@
+function setCurrentValue() {
+    chrome.storage.local.get(['redirectOption'], function (result) {
+        document.getElementById('redirectOption').value = result.redirectOption || 'vgToVoys';
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     // Retrieve and set the current redirect option
-    chrome.storage.local.get(['redirectOption'], function (result) {
-        document.getElementById('redirectOption').value = result.redirectOption || 'partnerToFreedom';
-    });
+    setCurrentValue();
 
     // Add a click event listener to the save button
     document.getElementById('save').addEventListener('click', function () {
